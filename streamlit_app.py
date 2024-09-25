@@ -11,7 +11,7 @@ genai.configure(api_key=load_api_key())
 def generate_campaign(club_name, event_name, event_description, guest_name, guest_title, date, venue, audience, tone):
     prompt = f"Generate an invitation for the {club_name} at SPJIMR. The event is {event_name}, focused on {event_description}. Chief guest {guest_name}, {guest_title}, on {date} at {venue}. Target audience: {audience}. Tone: {tone}."
     
-    model = genai.GenerativeModel("gemini-1.5-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash")
 
     try:
         response = model.generate_content([prompt])

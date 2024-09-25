@@ -3,8 +3,8 @@ import google.generativeai as genai
 
 # Configure the API using the correct API key (you can load it from a JSON file or environment variable)
 def load_api_key():
-    """Load API key from a credentials file or environment variable."""
-    return "AIzaSyDnVbAi0JBveDnCUTdzKyNaS6OwWsn1uCA"  # Replace with your actual API key
+    """Load API key from Streamlit secrets (TOML format)"""
+    return st.secrets["GEMINI_KEY"]
 
 genai.configure(api_key=load_api_key())
 

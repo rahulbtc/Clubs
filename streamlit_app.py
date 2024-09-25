@@ -26,7 +26,7 @@ def generate_campaign(club_name, event_name, event_description, guest_name, gues
 # Streamlit UI
 st.title("SPJIMR Event Campaign Generator")
 
-club_name = st.selectbox("Select Club", ["Consulting Club", "Analytics Club", "Product Management Club"])
+club_name = st.selectbox("Select Club", ["Consulting Club", "Analytics Club", "Product Management Club", "Speak Club", "OSCM Club", "Marketing Club", "Investment Club"])
 event_name = st.text_input("Event Name")
 event_description = st.text_area("Event Description")
 guest_name = st.text_input("Chief Guest Name")

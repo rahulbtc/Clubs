@@ -9,8 +9,7 @@ def load_api_key():
 genai.configure(api_key=load_api_key())
 
 def generate_campaign(club_name, event_name, event_description, guest_name, guest_title, date, venue, audience, tone):
-    prompt = f"Generate an invitation for the {club_name} at SPJIMR. The event is {event_name}, focused on {event_description}. Chief guest {guest_name}, {guest_title}, on {date} at {venue}. Target audience: {audience}. Tone: {tone}."
-    
+    prompt = f"As a Marketing Specialist, craft an engaging and persuasive event invitation for {club_name} at SPJIMR. The event is titled {event_name}, focusing on {event_description}. Highlight the participation of our Chief Guest, {guest_name}, who holds the title of {guest_title}. The event will be held on {date} at {venue}, targeting {audience}. Your tone should be {tone}, aiming to captivate the audience and encourage strong attendance. Ensure the invitation: 1. Clearly communicates the importance and relevance of the event. 2. Emphasizes the credentials and value brought by the Chief Guest. 3. Creates a sense of urgency and excitement, motivating recipients to attend. 4. Aligns with {club_name}'s values and branding."   
     model = genai.GenerativeModel("gemini-1.5-flash")
 
     try:
